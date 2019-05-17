@@ -9,9 +9,9 @@ var mongoose = require('mongoose');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var certificationsRouter = require('./routes/certifications');
-
+var cors = require('cors');
 var app = express();
-
+app.use(cors());
 mongoose.connect('mongodb+srv://root:root@cluster0-789lh.mongodb.net/test?retryWrites=true');
 
 // view engine setup
